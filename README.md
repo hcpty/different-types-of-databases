@@ -8,6 +8,4 @@ A comparison between Indexbase and Database.
   - 面向storage的Database通常会为了保证sync rate而在一定程度上牺牲user performance。
 
 ### Credits
-- [Oracle Database - Wikipedia](https://en.wikipedia.org/wiki/Oracle_Database)
-- [Redis - Wikipedia](https://en.wikipedia.org/wiki/Redis)
-- [Apache Cassandra - Wikipedia](https://en.wikipedia.org/wiki/Apache_Cassandra)
+- Computer Systems: A Programmer's Perspective, Third Edition
