@@ -10,8 +10,8 @@ Bases:
 - Database：用途是存储数据本体，其中的每条记录的字节数一般相对很多，因此Database一般不能同时保证sync rate和user performance。
   - Memory-Oriented Database：要保证user performance。
   - Storage-Oriented Database：要保证sync rate。
-    - Document Storage Database：针对结构查询进行优化。
-    - File Storage Database：针对文件存储进行优化。
+    - Document Storage Database：要针对格式支持进行优化。
+    - File Storage Database：要针对文件存储进行优化。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
