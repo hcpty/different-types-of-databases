@@ -35,5 +35,4 @@ A note about different types of databases.
 为了支持变长存储，通常使用内部链接的方式存储数据。主要用于存储无模式的二进制文件。
 
 ### Credits
-- Computer Systems: A Programmer's Perspective, Third Edition
 - [DB-Engines - Knowledge Base of Relational and NoSQL Database Management Systems](https://db-engines.com/)
