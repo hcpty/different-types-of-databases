@@ -10,11 +10,13 @@ Sync rate和user performance是一对此消彼长的属性，因为虽然磁盘�
 - 数据量小，而且选择了user performance first的解决方案，那么sync rate是很容易保证的。
 - 数据量大，而且选择了sync rate first的解决方案，那么user performance是不容易保证的。
 - 数据量大，而且选择了user performance first的解决方案，那么sync rate是不容易保证的。
+
 这意味着当数据量小的时候，容易兼顾sync rate和user performance，而当数据量大的时候，则必须在sync rate或user performance之间进行适当的取舍。
 
 经常对内容建立索引，以加快查找，内容和索引有如下区别：
 - 一般情况下，内容的数据量相对很大。
 - 一般情况下，索引的数据量相对很小。
+
 此时，如果选择了sync rate first的解决方案，将会严重影响索引上的user performance，这违背了索引的初衷，针对这种场景的最佳实践是将内容和索引分开存储。
 
 ### Credits
