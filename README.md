@@ -9,7 +9,7 @@ A note about different types of databases.
 
 存储一致性关于Sync Rate的函数的特点是：Sync Rate越小，存储一致性越小，Sync Rate越大，存储一致性越大。
 
-许多场景对存储一致性有严格的要求，因此需要把Sync Rate设置成一个很大的值。
+许多场景对存储一致性有严苛的要求，因此需要把Sync Rate设置成一个很大的值。
 
 在这类数据库中，CPU会花费较多的时间用于在数据库缓冲和内核磁盘缓冲之间拷贝数据。
 
@@ -19,7 +19,7 @@ A note about different types of databases.
 
 响应及时性关于Sync Rate的函数的特点是：Sync Rate越小，响应及时性越大，Sync Rate越大，响应及时性越小。
 
-许多场景对响应及时性有严格的要求，因此需要把Sync Rate设置成一个很小的值。
+许多场景对响应及时性有严苛的要求，因此需要把Sync Rate设置成一个很小的值。
 
 在这类数据库中，CPU会花费较多的时间用于在数据库缓冲和内核网卡缓冲之间拷贝数据。
 
