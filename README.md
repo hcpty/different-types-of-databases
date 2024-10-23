@@ -30,7 +30,7 @@ A note about different types of databases.
 可能使用内部对齐的方式存储数据，也可能使用内部链接的方式存储数据。文档具有相对松散的结构。
 
 ##### 文件数据库
-为了支持变长存储，通常使用内部链接的方式存储数据。把文件视为一个比特串，文件不具有结构。
+为了支持变长存储，通常使用内部链接的方式存储数据。可以把文件视为一个比特串，文件不具有结构。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
