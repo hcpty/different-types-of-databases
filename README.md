@@ -21,13 +21,13 @@ A note about different types of databases.
 - 主要用于存储表中的行，表中的行有data schema的约束。
 - 因为记录的结构和每个字段的类型都是确定的，所以主要使用内部对齐的方式存储数据。
 
-##### 无模式数据库
-- 主要用于存储无模式的二进制文件。
-- 通常使用内部链接的方式存储数据，以支持可变长度的文件存储。
-
 ##### 自由模式数据库
-- 主要用于存储各种自由模式的数据。
+- 主要用于存储各种自由模式的数据，例如JSON、Set、String等。
 - 根据要存储的数据的统计长度，可能使用内部对齐的方式存储数据，也可能使用内部链接的方式存储数据。
+
+##### 无模式数据库
+- 主要用于存储与模式无关的二进制文件，例如图片、视频、Excel文件、程序安装包、压缩包等。
+- 通常使用内部链接的方式存储数据，以支持可变长度的文件存储。
 
 ### Credits
 - [DB-Engines - Knowledge Base of Relational and NoSQL Database Management Systems](https://db-engines.com/)
