@@ -33,7 +33,7 @@ Sync rate和user performance是一对此消彼长的属性，因为虽然磁盘�
 
 NoSQL支持大数据量，支持丰富的内容格式，所以是存储内容的优良场所，NoSQL的主要用途之一就是存储内容。NoSQL适合存储内容的原因包括：
 - 针对内容格式进行了优化，例如针对JSON内置序列化和反序列化，针对二进制文件存储进行了优化。
-- 针对数据量的支持进行了优化，放开了sync rate的束缚，允许在一定程度上牺牲sync rate以保证大数据量情况下的user performance。
+- 针对数据量的支持进行了优化，放开了sync rate的束缚，允许在一定程度上牺牲sync rate以保证大数据量下的user performance。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
