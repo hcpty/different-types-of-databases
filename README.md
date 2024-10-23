@@ -1,39 +1,15 @@
 # Readme
-A note about Sync Rate and User Performance.
+A note about Sync Rate.
 
-### Sync Rate and User Performance
+### Sync Rate
 
-##### Sync Rate and User Performance
+存储一致性是指数据在内存和外存之间的一致程度。存储一致性关于Sync Rate的函数的特点是：Sync Rate越小，存储一致性越小，Sync Rate越大，存储一致性越大。
 
-Sync rate和user performance是一对此消彼长的属性，因为虽然磁盘缓冲和内核磁盘缓冲之间的数据拷贝通常通过Direct Memory Access Transfer的方式进行，不需要CPU全程控制，但是用户程序缓冲和内核磁盘缓冲之间的数据拷贝通常通过Traditional Memory Access Transfer的方式进行，需要CPU全程控制，而且，要传送的字节数越多，要占用的CPU循环就越多。
+响应及时性是指数据库响应每一个查询请求的速度。响应及时性关于Sync Rate的函数的特点是：Sync Rate越小，响应及时性越大，Sync Rate越大，响应及时性越小。
 
-考虑以下4种场景：
-- 数据量小，而且选择了sync rate first的解决方案，那么user performance是容易保证的。
-- 数据量小，而且选择了user performance first的解决方案，那么sync rate是容易保证的。
-- 数据量大，而且选择了sync rate first的解决方案，那么user performance是不容易保证的。
-- 数据量大，而且选择了user performance first的解决方案，那么sync rate是不容易保证的。
+问题1：许多场景要求必须保证存储一致性，所以必须设置很高的Sync Rate，但是随着数据量的增大，响应及时性会逐渐降低直至丧失。
 
-这意味着：
-- 当数据量小的时候，容易兼顾sync rate和user performance。
-- 当数据量大的时候，不容易兼顾sync rate和user performance，必须在sync rate和user performance之间进行适当的取舍。
-
-##### 索引存储 vs 内容存储
-
-对内容建立索引的目的是加快查找。索引和内容有如下区别：
-- 一般情况下，索引的数据量相对很小。
-- 一般情况下，内容的数据量相对很大。
-
-此时，如果选择了sync rate first的解决方案，将会严重影响索引上的user performance，这就违背了索引的初衷，针对这种场景的最佳实践是将内容和索引分开存储。当然，如果选择了user performance first的解决方案，则一般影响不会很大。
-
-##### 索引数据库 vs 内容数据库
-
-关系型数据库支持复杂的索引，支持显式的锁，所以是存储索引的优良场所，关系型数据库的主要用途之一就是存储索引。关系型数据库不适合存储内容的原因包括：
-- 对内容格式的支持有限，一般只限于表，因为关系型数据库正是由此得名。
-- 对数据量的支持有限，因为关系型数据库一般都是sync rate first的。
-
-NoSQL支持丰富的内容格式，支持大数据量，所以是存储内容的优良场所，NoSQL的主要用途之一就是存储内容。NoSQL适合存储内容的原因包括：
-- 针对内容格式进行了优化，例如针对JSON内置序列化和反序列化，针对二进制文件存储进行了优化。
-- 针对数据量的支持进行了优化，允许在一定程度上牺牲sync rate以保证大数据量下的user performance。
+问题2：许多场景要求必须保证响应及时性，所以必须设置很低的Sync Rate，但是随着写操作的增多，存储一致性会逐渐降低直至丧失。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
