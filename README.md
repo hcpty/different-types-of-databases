@@ -17,7 +17,7 @@ Sync rate和user performance是一对此消彼长的属性，因为虽然磁盘�
 - 当数据量小的时候，容易兼顾sync rate和user performance。
 - 当数据量大的时候，不容易兼顾sync rate和user performance，必须在sync rate和user performance之间进行适当的取舍。
 
-##### 索引 vs 内容
+##### 索引存储 vs 内容存储
 
 对内容建立索引的目的是加快查找。内容和索引有如下区别：
 - 一般情况下，内容的数据量相对很大。
