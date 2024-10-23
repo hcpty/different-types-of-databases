@@ -16,7 +16,7 @@ Sync rate和user performance是一对此消彼长的属性，因为虽然磁盘�
 对内容建立索引的目的是加快查找。内容和索引有如下区别：
 - 一般情况下，内容的数据量相对很大而索引的数据量相对很小。
 
-此时，如果选择了sync rate first的解决方案，将会严重影响索引上的user performance，这违背了索引的初衷，针对这种场景的最佳实践是将内容和索引分开存储。如果选择了user performance first的解决方案，则影响不大。
+此时，如果选择了sync rate first的解决方案，将会严重影响索引上的user performance，这违背了索引的初衷，针对这种场景的最佳实践是将内容和索引分开存储。当然，如果选择了user performance first的解决方案，则一般没有影响。
 
 ### Credits
 - Computer Systems: A Programmer's Perspective, Third Edition
