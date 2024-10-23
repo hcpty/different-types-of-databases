@@ -17,7 +17,7 @@ Sync rate和user performance是一对此消彼长的属性，因为虽然磁盘�
 - 当数据量小的时候，容易兼顾sync rate和user performance。
 - 当数据量大的时候，不容易兼顾sync rate和user performance，必须在sync rate和user performance之间进行适当的取舍。
 
-##### 索引存储和内容存储
+##### 索引存储 vs 内容存储
 
 对内容建立索引的目的是加快查找。内容和索引有如下区别：
 - 一般情况下，内容的数据量相对很大。
@@ -25,7 +25,7 @@ Sync rate和user performance是一对此消彼长的属性，因为虽然磁盘�
 
 此时，如果选择了sync rate first的解决方案，将会严重影响索引上的user performance，这就违背了索引的初衷，针对这种场景的最佳实践是将内容和索引分开存储。当然，如果选择了user performance first的解决方案，则一般影响不会很大。
 
-##### 索引数据库和内容数据库
+##### 索引数据库 vs 内容数据库
 
 关系型数据库支持丰富的索引类型，支持显式的锁操作，存储索引时，能够兼顾sync rate和user performance，所以存储索引的优良场所，关系型数据库的主要用途之一就是存储索引。
 
