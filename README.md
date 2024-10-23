@@ -3,7 +3,7 @@ A note about different types of databases.
 
 ### 不同类型的数据库
 
-第一种分类方法是根据Sync Rate，第二种分类方法是根据数据的结构属性。
+第一种分类方法是根据Sync Rate，第二种分类方法是根据Data Schema。
 
 ##### 严格要求存储一致性的数据库
 
