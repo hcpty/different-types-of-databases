@@ -3,7 +3,7 @@ A note about different types of databases.
 
 ### 不同类型的数据库
 
-本文对数据库进行分类的第一种依据是sync rate，第二种依据是data schema。
+第一种分类依据是sync rate，第二种分类依据是data schema。
 
 ##### 严格要求存储一致性的数据库
 - 存储一致性是指数据在内部主存和外部存储之间的一致程度。
