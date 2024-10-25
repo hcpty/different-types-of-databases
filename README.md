@@ -14,7 +14,7 @@ A note about different types of databases.
 - 在这类数据库中，CPU会花费较多的时间用于在数据库缓冲和内核网卡缓冲之间拷贝数据。
 
 ##### 通用数据库
-- 可以存储各种数据，例如JSON、BitArray、List、Set、String等。
+- 可以存储各种数据，例如JSON、Binary Array、List、Set、String等。
 - 代表有MongoDB和Redis。
 
 ##### 模式数据库
