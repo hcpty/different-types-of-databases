@@ -15,17 +15,14 @@ A note about different types of databases.
 
 ##### 通用数据库
 - 可以存储各种数据，例如JSON、BitArray、List、Set、String等。
-- 根据要存储的数据的统计长度，可能使用内部对齐的方式存储数据，也可能使用内部链接的方式存储数据。
 - 代表有MongoDB和Redis。
 
 ##### 模式数据库
 - 专门存储有模式约束的数据，模式是指对数据的结构、字段的类型和大小施加的约束，以获得额外的好处。
-- 因为数据的结构、字段的类型和大小都是确定的，所以可以使用内部对齐的方式存储数据。
 - 代表有Oracle Database和Oracle In-Memory Database。
 
 ##### 文件数据库
 - 专门存储二进制文件，例如图片、视频、Excel文件、程序安装包、压缩包等。
-- 通常使用内部链接的方式存储数据，以支持存储可变长度的文件。
 - 代表有Apache Cassandra和Redis。
 
 ### Credits
