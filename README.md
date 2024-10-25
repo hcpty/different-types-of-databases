@@ -23,7 +23,7 @@ A note about different types of databases.
 
 ##### 文件数据库
 - 专门针对二进制文件存储进行了优化，常见的二进制文件包括图片、视频、Excel文件、程序安装包、压缩包等。
-- 代表有Apache Cassandra和Redis。注意：MongoDB由于有内部存储结构的限制，不能够很好地存储大文件，所以在文件存储方面有局限。
+- 代表有Apache Cassandra和Redis。注意：MongoDB由于有内部存储结构的限制，不能够很好地存储大文件，在文件存储方面有一定的局限。
 
 ### Credits
 - [DB-Engines - Knowledge Base of Relational and NoSQL Database Management Systems](https://db-engines.com/)
