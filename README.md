@@ -22,8 +22,8 @@ A note about different types of databases.
 - 代表有Oracle Database和Oracle In-Memory Database。
 
 ##### 文件数据库
-- 对二进制文件存储进行了优化，专门存储二进制文件，例如图片、视频、Excel文件、程序安装包、压缩包等。
-- 代表有Apache Cassandra和Redis。注意：MongoDB由于有内部存储结构的限制，在二进制文件存储方面有局限，而Redis没有这方面的局限。
+- 专门针对二进制文件存储进行了优化，常见的二进制文件包括图片、视频、Excel文件、程序安装包、压缩包等。
+- 代表有Apache Cassandra和Redis。注意：MongoDB由于有内部存储结构的限制，不能够很好地存储大文件，所以在文件存储方面有局限。
 
 ### Credits
 - [DB-Engines - Knowledge Base of Relational and NoSQL Database Management Systems](https://db-engines.com/)
