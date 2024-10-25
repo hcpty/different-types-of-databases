@@ -22,7 +22,7 @@ A note about different types of databases.
 - 代表有Oracle Database和Oracle In-Memory Database。
 
 ##### 文件数据库
-- 针对二进制文件存储进行了优化，专门存储二进制文件，例如图片、视频、Excel文件、程序安装包、压缩包等。
+- 对二进制文件存储进行了优化，专门存储二进制文件，例如图片、视频、Excel文件、程序安装包、压缩包等。
 - 代表有Apache Cassandra和Redis。
 
 ### Credits
